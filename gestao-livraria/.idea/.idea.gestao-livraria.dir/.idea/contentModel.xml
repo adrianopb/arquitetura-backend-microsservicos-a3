@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\adria\.Rider2019.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\adria\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_.19.00" t="ExcludeRecursive" />
+    <e p="C:\Users\adria\Desktop\Adriano\Engenharia de Arquitetura de Software Distribuído - PUC\Arquitetura de Backend e Microsserviços\Atividades Práticas\arquitetura-backend-microsservicos-a3\gestao-livraria" t="IncludeRecursive">
+      <e p="appsettings.Development.json" t="Include" />
+      <e p="appsettings.json" t="Include" />
+      <e p="bin" t="ExcludeRecursive" />
+      <e p="Controllers" t="Include">
+        <e p="LivrosController.cs" t="Include" />
+        <e p="ValuesController.cs" t="Include" />
+      </e>
+      <e p="gestao-livraria.csproj" t="IncludeRecursive" />
+      <e p="Mocks" t="Include">
+        <e p="Comentario.cs" t="Include" />
+        <e p="Pedido.cs" t="Include" />
+        <e p="PedidoContainer.cs" t="Include" />
+      </e>
+      <e p="Models" t="Include">
+        <e p="Comentario.cs" t="Include" />
+        <e p="Livro.cs" t="Include" />
+        <e p="Pedido.cs" t="Include" />
+        <e p="PedidoContainer.cs" t="Include" />
+      </e>
+      <e p="obj" t="ExcludeRecursive">
+        <e p="Debug" t="Include">
+          <e p="netcoreapp2.1" t="Include">
+            <e p="gestao-livraria.AssemblyInfo.cs" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Program.cs" t="Include" />
+      <e p="Properties" t="Include">
+        <e p="launchSettings.json" t="Include" />
+      </e>
+      <e p="Startup.cs" t="Include" />
+      <e p="wwwroot" t="Include" />
+    </e>
+  </component>
+</project>
