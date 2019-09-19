@@ -1,17 +1,22 @@
-public class Livros {
+using System.Collections.Generic;
+
+public class Livro {
      public int Id { get; set; }
      public string Nome { get; set; }
- 
-     public List<Livros> RetornaListaLivros() {
+
+     public List<Livro> ListaLivros()
+     {
+         var v_ListaLivros = new List<Livro>();
          
-     }
- 
-     public List<Livros> ListaLivro() {
-         for (int i = 0; i < UPPER; i++) {
-             return new Livros() {
-                 Id = 1,
-                 Nome = "Livro 1",
+         for (int i = 1; i <= 100; i++) {
+             var v_Livro = new Livro() {
+                 Id = i,
+                 Nome = "Livro " + i,
              };
+             
+             v_ListaLivros.Add(v_Livro);
          }
+
+         return v_ListaLivros;
      }
  }

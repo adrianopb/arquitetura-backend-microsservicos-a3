@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 
 namespace gestao_livraria.Controllers
 {
@@ -21,7 +22,14 @@ namespace gestao_livraria.Controllers
         [HttpGet("{id}")]
         public ActionResult<string> Get(int id)
         {
-            return "value";
+            Livro v_Livro = new Livro();
+            List<Livro> v_ListaLivros = new List<Livro>();
+
+            v_ListaLivros = v_Livro.ListaLivros();
+
+            v_Livro = v_ListaLivros.SingleOrDefault(q => q.Id == id);
+
+            return "Livro encontrado: Identificador: " + v_Livro.Id + "\n                   Nome: " + v_Livro.Nome ;
         }
 
         // POST api/livros
