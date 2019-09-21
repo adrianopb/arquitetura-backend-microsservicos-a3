@@ -1,10 +1,25 @@
+using System;
 using System.Collections.Generic;
+using System.Linq;
+using Microsoft.AspNetCore.Mvc;
 
 public class Livro {
      public int Id { get; set; }
      public string Nome { get; set; }
 
-     public List<Livro> ListaLivros()
+     public IEnumerable<Livro> BuscarLivros(int? id)
+     {
+         var v_ListaLivros = new List<Livro>(ListaLivros());
+         
+         if (id != null)
+         {
+             return v_ListaLivros.Any(q => q.Id == id) ? v_ListaLivros.Where(q => q.Id == id) : null;
+         }
+
+         return v_ListaLivros;
+     }
+
+     public IEnumerable<Livro> ListaLivros()
      {
          var v_ListaLivros = new List<Livro>();
          

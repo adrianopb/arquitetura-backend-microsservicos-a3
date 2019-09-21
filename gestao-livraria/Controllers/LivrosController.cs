@@ -1,35 +1,39 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
+using System.Net.Mime;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
 namespace gestao_livraria.Controllers
 {
-    [Route("api/[controller]")]
+//    [Produces(MediaTypeNames.Application.Json)]
+    [Route("v1/[controller]")]
     [ApiController]
     public class LivrosController : ControllerBase
     {
         // GET api/livros
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
-        {
-            return new string[] { "value1", "value2" };
-        }
+//        public ActionResult<IEnumerable<Livro>> Get()
+//        {
+//            Livro v_Livro = new Livro();
+//            
+//            List<Livro> v_
+//            
+//            return new string[] { "value1", "value2" };
+//        }
 
         // GET api/livros/5
         [HttpGet("{id}")]
-        public ActionResult<string> Get(int id)
+        public IEnumerable<Livro> Get(int? id)
         {
             Livro v_Livro = new Livro();
             List<Livro> v_ListaLivros = new List<Livro>();
 
-            v_ListaLivros = v_Livro.ListaLivros();
-
-            v_Livro = v_ListaLivros.SingleOrDefault(q => q.Id == id);
-
-            return "Livro encontrado: Identificador: " + v_Livro.Id + "\n                   Nome: " + v_Livro.Nome ;
+            //falta gerar a exceção
+            return v_Livro.BuscarLivros(id);
         }
 
         // POST api/livros

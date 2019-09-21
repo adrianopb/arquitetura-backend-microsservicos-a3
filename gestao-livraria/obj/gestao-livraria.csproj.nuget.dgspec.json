@@ -14,15 +14,17 @@
         "outputPath": "C:\\Users\\adria\\Desktop\\Adriano\\Engenharia de Arquitetura de Software Distribuído - PUC\\Arquitetura de Backend e Microsserviços\\Atividades Práticas\\arquitetura-backend-microsservicos-a3\\gestao-livraria\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Users\\adria\\.dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\adria\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\adria\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.1"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
