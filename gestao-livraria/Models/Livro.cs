@@ -1,7 +1,7 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using Microsoft.AspNetCore.Mvc;
+using System.Net;
+using System.Net.Http;
 
 public class Livro {
      public int Id { get; set; }
@@ -15,7 +15,7 @@ public class Livro {
          {
              return v_ListaLivros.Any(q => q.Id == id) ? v_ListaLivros.Where(q => q.Id == id) : null;
          }
-
+         
          return v_ListaLivros;
      }
 

@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Net.Http;
 using System.Net.Mime;
 using System.Threading.Tasks;
@@ -30,10 +31,16 @@ namespace gestao_livraria.Controllers
         public IEnumerable<Livro> Get(int? id)
         {
             Livro v_Livro = new Livro();
-            List<Livro> v_ListaLivros = new List<Livro>();
+            IEnumerable<Livro> v_ListaLivros = new List<Livro>();
 
             //falta gerar a exceção
-            return v_Livro.BuscarLivros(id);
+            v_ListaLivros = v_Livro.BuscarLivros(id);
+            
+         
+            if (v_ListaLivros == null)
+            {
+                throw new Http(new HttpResponseMessage(HttpStatusCode.NotFound));
+            }
         }
 
         // POST api/livros
